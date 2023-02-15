@@ -14,8 +14,15 @@
     <p>Linguagem: <%= lang %></p>
     <p>Empresa: <%= empresa %></p>
     <p>Numero de funcionários: <%= participantes %></p>
-    <% if (msg){%>
-    <h3>Isso é um erro!</h3>
+    <% if (msg==true){%>
+        <h3>Isso é um teste!</h3>
+    <%} else {%>
+        <h3>Isso é um erro</h3>
     <%}%>
+
+    <% produtos.forEach(function(produto) {%>
+        <p>Produto: <%= produto.nome %> </p>
+        <p>Preço: <%= produto.preco %> </p>
+    <%})%>
 </body>
 </html>
